@@ -41,6 +41,6 @@ label start:
 
     "Well, this is it. Here we are."
 
-    "There's no turning back now.:c"
+    "There's no turning back now.c:"
 
     return
