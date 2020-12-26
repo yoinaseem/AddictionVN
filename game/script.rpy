@@ -58,7 +58,9 @@ label start:
     
     "hitting sfx"
     
-    show joker_download
+    show joker download:
+        xalign 0.5
+        yalign 0.5
     
     h "I shall defeat you vile serpent"
     
