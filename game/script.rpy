@@ -22,35 +22,18 @@ define m = Character("Me")
 
 label start:
 
+    show screen calendar_screen
     call variables
 
-    show screen calendar_screen
+    $ calendar.AdvanceTime(0)
+    $ Output = calendar.Output
+
     $ GameRunning = True
-    $ Output = WeekDays[Day] + " " + Months[Month] + " " + str(MonthDay+1) + " " + str(GameHour).zfill(2) + ":" + str(Minutes).zfill(2)
-   
     # while GameRunning:
-
-        
-    #     "[Output]"
-
-    #     $ Minutes += 30
-    #     if Minutes >= 60:
-    #         $ Minutes = 0
-    #         $ GameHour += 1
-    #     if GameHour >= 24:
-    #         $ GameHour = 0
-    #         $ Day += 1
-    #         $ MonthDay += 1
-    #     if Day >= 7:
-    #         $ Day = 0 
-    #     if MonthDay > MonthDays[Month]:
-    #         $ Month += 1
-    #         $ MonthDay = 0
-    #     if Month >=12:
-    #         $ Month = 0
-
-    #     call EventCheck
-
+    #     "Click"
+    #     $ calendar.AdvanceTime(1)
+    #     $ Output = calendar.Output
+    # return
 
     scene tokyo_street
 
@@ -61,7 +44,6 @@ label start:
     "I wonder what kind of people my flatmates are." 
 
     "Hopefully my flatmates turn out to be chill people."
-
 
     scene school_hallway
 
@@ -154,21 +136,13 @@ label start:
 label variables:
 
     $ PLAYERNAME = "Anon"
-    $ WeekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    $ Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    $ MonthDays = [31, 28,31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    $ TimeOfDay = ["Morning", "Afternoon", "Evening", "Night"]
-    $ GameHour = 12
-    $ Minutes = 0
-    $ Day =  0
-    $ MonthDay = 0
-    $ Month = 0
-
+    $ calendar = Calendar(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], [31, 28,31, 30, 31, 30, 31, 31, 30, 31, 30, 31], ["Morning", "Afternoon", "Evening", "Night"], 8, 0, 0, 0, 0)
     return
 
 label EventCheck:
 
-    $ GameHour = 18
+    $ calendar.AdvanceTime(8)
+    $ Output = calendar.Output
     "I am high as fuck right now, I need to lie down."
 
     return
