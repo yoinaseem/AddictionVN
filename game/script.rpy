@@ -3,7 +3,10 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define p = Character("Psychadelic")
+define s = Character("Stimulant")
+define d = Character("Dissociative")
+define ad = Character("Anti-Depressant")
 define m = Character("Me")
 
 
@@ -23,6 +26,7 @@ label start:
     # directory.
 
     # show eileen happy
+    show eileen happy
 
     #{ DIALOGUE }
     # These display lines of dialogue.
