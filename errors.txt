@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 19: end of line expected.
-    scene Concept_art_1.jpg
-                       ^
+File "game/script.rpy", line 171: expected statement.
+    GameHour = 18
+             ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Dec 25 21:14:05 2020
+Sat Dec 26 14:13:34 2020
