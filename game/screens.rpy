@@ -291,40 +291,55 @@ screen navigation():
 
     vbox:
         style_prefix "navigation"
+        
+        if main_menu:
+        
+        
+            xalign 0.05
+            ypos 0.3
+        
+            
+            spacing 60
+            
+        
+        else:
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+           xpos gui.navigation_xpos
+           yalign 0.5
 
-        spacing gui.navigation_spacing
+           spacing gui.navigation_spacing
+        
 
         if main_menu:
 
             textbutton _("Start") action Start()
 
         else:
+            textbutton _("Main Menu") action MainMenu()
 
             textbutton _("History") action ShowMenu("history")
 
             textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
+        textbutton _("config") action ShowMenu("preferences")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
-
+        
+       
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
-        elif not main_menu:
+            
 
-            textbutton _("Main Menu") action MainMenu()
+            
+        
+           #textbutton _("About") action ShowMenu("about")
 
-        textbutton _("About") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            #textbutton _("Help") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -390,14 +405,14 @@ style main_menu_frame:
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
-    xalign 1.0
+    xalign 0.5
     xoffset -30
     xmaximum 1200
-    yalign 1.0
+    yalign 0.1
     yoffset -30
 
 style main_menu_text:
-    properties gui.text_properties("main_menu", accent=True)
+    properties gui.text_properties("main_menu", accent=False)
 
 style main_menu_title:
     properties gui.text_properties("title")
