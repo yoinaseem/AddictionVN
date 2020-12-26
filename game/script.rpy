@@ -7,6 +7,7 @@ define p = Character("Psychadelic")
 define s = Character("Stimulant")
 define d = Character("Dissociative")
 define ad = Character("Anti-Depressant")
+define h = Character ("Hallucinogens")
 
 define r1 = Character("Roommate1")
 define r2 = Character("Roommate2")
@@ -49,8 +50,54 @@ label start:
 
     "Well, this is it. Here we are."
 
-    "There's no turning back now.c:"
-
+    "There's no turning back now."  
+    
+    "I have to get to the dorms now"
+    
+    "wonder where that is though.."
+    
+    "hitting sfx"
+    
+    show joker_download
+    
+    h "I shall defeat you vile serpent"
+    
+    m "Wild wh.."
+    
+    h "yOU TALK"
+    
+    h "Guess youre not a serpent after all"
+    
+    m "I.."
+    
+    h "loook THERE" 
+    
+    h "there are more creatures that need slaying there"
+    
+    m "More of what" 
+    
+    m "Wait are you a student here"
+    
+    m "do you know how to.."
+    
+    h " IT IS TIME TO VANQUISH THE EVIL"
+    
+    m "..get to the droms" 
+    
+    "she runs off" 
+    
+    hide joker_download 
+    
+    h "Dorms are the building to the right"
+    
+    m "oh"
+    
+    m "thanks" 
+    
+    "What. The. Actual. Fuck"
+    
+    "Well lets see if her directions were right"
+    
     scene house_bedroom
 
     show roommate1pic

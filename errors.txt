@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 19: end of line expected.
-    scene Concept_art_1.jpg
-                       ^
+File "game/script.rpy", line 97: indentation mismatch.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Dec 25 21:14:05 2020
+Sat Dec 26 14:27:30 2020
