@@ -7,6 +7,7 @@ define p = Character("Psychadelic")
 define s = Character("Stimulant")
 define d = Character("Dissociative")
 define ad = Character("Anti-Depressant")
+define o = Character("Opioids")
 
 define r1 = Character("Roommate1")
 define r2 = Character("Roommate2")
