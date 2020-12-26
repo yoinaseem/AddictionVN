@@ -14,24 +14,27 @@ default Location = "Bedroom"
 
 label start:
 
-    show screen calendar_screen
-    show screen map_screen
+
     call variables
     $ Output = calendar.Output
     # $ MapMenu = renpy.call_screen("MapScreen", _layer="screens")
 
     $ GameRunning = True
     while GameRunning:
+        show screen calendar_screen
+        show screen map_screen
         $ Location_img = Location.lower()
         if renpy.has_image(Location_img, exact=True):
             scene expression Location_img
 
-        menu:
-            "[Location]"
+        # menu:
+        "[Location]"
             # $ MapMenu = renpy.call_screen("MapScreen", _layer="screens")
 
-            "Open map":
-                $ Location = renpy.call_screen("MapScreen", _layer="screens")
+            # "hello":
+            #     "hi"
+            # "Open map":
+                # $ Location = renpy.call_screen("MapScreen", _layer="screens")
     return
 
     #call introscript
@@ -54,7 +57,8 @@ label EventCheck:
 
 label OpenMap:
 
-    $ renpy.call_screen("MapScreen", _layer="screens")
+    $ Location = renpy.call_screen("MapScreen", _layer="screens")
+    #call screen MapScreen
     return
 
 # label introscript:

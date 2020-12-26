@@ -5,8 +5,13 @@ screen calendar_screen():
 
 screen map_screen():
     hbox:
+        xalign 1.0
+        yalign 0.0
         # textbutton _("Open Map") action (Hide("map_screen"), Show("MapScreen")), Return(0)
-        textbutton _("Open Map") action Call("OpenMap"), Hide("map_screen")
+        imagebutton:
+            idle "mapicon"
+            hover "mapiconhovered" 
+            action Call("OpenMap"), Hide("map_screen")
 
 
 screen MapScreen():

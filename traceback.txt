@@ -1,26 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 25, in script
-    $ Location_img = Location.lower()
-  File "game/script.rpy", line 25, in <module>
-    $ Location_img = Location.lower()
-AttributeError: 'Call' object has no attribute 'lower'
+  File "game/script.rpy", line 56, in script
+    return
+Exception: Could not find return label (u'game/script.rpy', 1609026060, 12).
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 25, in script
-    $ Location_img = Location.lower()
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/script.rpy", line 25, in <module>
-    $ Location_img = Location.lower()
-AttributeError: 'Call' object has no attribute 'lower'
+  File "game/script.rpy", line 56, in script
+    return
+  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1507, in execute
+    next_node(renpy.game.context().lookup_return(pop=True))
+  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\execution.py", line 696, in lookup_return
+    raise Exception("Could not find return label {!r}.".format(self.return_stack[-1]))
+Exception: Could not find return label (u'game/script.rpy', 1609026060, 12).
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 AddictionVN 1.0
-Sat Dec 26 22:27:17 2020
+Sat Dec 26 23:42:05 2020
