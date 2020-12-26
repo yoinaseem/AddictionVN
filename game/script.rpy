@@ -7,6 +7,11 @@ define p = Character("Psychadelic")
 define s = Character("Stimulant")
 define d = Character("Dissociative")
 define ad = Character("Anti-Depressant")
+
+define r1 = Character("Roommate1")
+define r2 = Character("Roommate2")
+define r3 = Character("Roommate3")
+
 define m = Character("Me")
 
 
@@ -26,7 +31,6 @@ label start:
     # directory.
 
     # show eileen happy
-    show eileen happy
 
     #{ DIALOGUE }
     # These display lines of dialogue.
@@ -46,5 +50,30 @@ label start:
     "Well, this is it. Here we are."
 
     "There's no turning back now.c:"
+
+    scene house_bedroom
+
+    show roommate1pic
+    r1 "Hey how're you doing?"
+
+    m "I'm alright man, my name is PLAYERNAME"
+
+    r1 "I'm roommate 1"
+
+    show roommate2pic
+    r2 "I'm roommate 2"
+
+    show roommate3pic
+    r3 "I'm roommate 3"
+
+    show roommate1pic
+    r1 "Come on, we'll get acquainted after you hit this bowl"
+
+    m "Huh? I don't smoke"
+
+    show roommate2pic
+    r2 "That's not how it is in college bro trust, you'll change your mind just hit it"
+
+    m "Fuck it let's do it"
 
     return
