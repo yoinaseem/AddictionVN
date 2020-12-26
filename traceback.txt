@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 24, in script
-    $ calendar.AdvanceTime(0)
-  File "game/script.rpy", line 24, in <module>
-    $ calendar.AdvanceTime(0)
-NameError: name 'calendar' is not defined
+  File "game/scripts/events.rpy", line 1, in script
+    init python:
+  File "game/scripts/events.rpy", line 43, in <module>
+    Places.append(Places(0,0,"", False))
+TypeError: 'RevertableList' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 24, in script
-    $ calendar.AdvanceTime(0)
+  File "game/scripts/events.rpy", line 1, in script
+    init python:
   File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 24, in <module>
-    $ calendar.AdvanceTime(0)
-NameError: name 'calendar' is not defined
+  File "game/scripts/events.rpy", line 43, in <module>
+    Places.append(Places(0,0,"", False))
+TypeError: 'RevertableList' object is not callable
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 AddictionVN 1.0
-Sat Dec 26 15:30:59 2020
+Sat Dec 26 18:43:13 2020

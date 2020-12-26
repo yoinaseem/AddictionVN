@@ -28,3 +28,23 @@ init python:
                 self.MonthDay = 0
             if self.Month >=12:
                 self.Month = 0
+
+    class Place(object):
+        def __init__(self, x, y, name, isActive):
+            self.x = x
+            self.y = y 
+            self.name = name 
+            self.isActive = isActive 
+
+    Places = []
+    t=0
+
+    while t < 50:
+        Places.append(Place(0,0,"", False))
+        t+=1
+
+    Places[0] = Place(1000,500, "Bedroom", True)
+    Places[1] = Place(700,300, "Dorm", True)
+    Places[2] = Place(200,500, "College", True)
+    Places[3] = Place(500,100, "Street", True)
+
