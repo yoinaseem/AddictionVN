@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 31: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
-    show demo_happy
-    ^
+File "game/script.rpy", line 66: expected statement.
+    Location = College
+             ^
+
+File "game/script.rpy", line 71: expected statement.
+    Location = Street
+             ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Dec 27 01:48:15 2020
+Sun Dec 27 15:02:08 2020

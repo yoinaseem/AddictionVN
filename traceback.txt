@@ -1,20 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 23, in script
-    while GameRunning:
-Exception: Possible infinite loop.
+  File "game/script.rpy", line 40, in script call
+    "Lets take a walk on the streets":
+  File "game/script.rpy", line 66, in script
+    "Wow, campus sure is pretty!"
+  File "game/script.rpy", line 66, in <module>
+    "Wow, campus sure is pretty!"
+NameError: name 'College' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 23, in script
-    while GameRunning:
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\execution.py", line 59, in check_infinite_loop
-    raise Exception("Possible infinite loop.")
-Exception: Possible infinite loop.
+  File "game/script.rpy", line 40, in script call
+    "Lets take a walk on the streets":
+  File "game/script.rpy", line 66, in script
+    "Wow, campus sure is pretty!"
+  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 66, in <module>
+    "Wow, campus sure is pretty!"
+NameError: name 'College' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 AddictionVN 1.0
-Sun Dec 27 01:51:42 2020
+Sun Dec 27 15:03:00 2020

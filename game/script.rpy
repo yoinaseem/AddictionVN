@@ -28,8 +28,24 @@ label start:
             scene expression Location_img
 
         # "[Location]"
-        show demo_worried
-        r1 "Sorry [PLAYERNAME], all we can do right now is move around the map together..."
+        "Hmmm there's not much to do right now..."
+
+        if Location == "Dorm":
+            scene dorm
+            show demo     
+            r1 "Hey [PLAYERNAME]!"
+            r1 "Wanna go outside on a walk with me?"
+
+            menu:
+                "Sure, let's go check out campus":
+                    call college_dialogue
+                "Lets take a walk on the streets":
+                    call street_dialogue
+                "Follow me to my room":
+                    call bedroom_dialogue_r1
+                "No I think I'll pass":
+                    show demo worried
+                    r1 "Do you not like me?"
 
         # menu:
             # $ MapMenu = renpy.call_screen("MapScreen", _layer="screens")
@@ -42,12 +58,49 @@ label start:
 
     #call introscript
 
+label bedroom_dialogue_r1:
+    $ Location = "Bedroom"
+    scene bedroom
+    show demo happy
+    r1 "We're in your bedroom [PLAYERNAME]"
+    show demo worried
+    r1 "I... I think I'm going to leave..."
+    return
 
+label college_dialogue:
+    $ Location = "College"
+    scene college
+    show demo happy at right
+    r1 "Wow, campus sure is pretty!"
+    m "Yeah. Should we head back?"
+    r1 "Yeah."
+    $ Location = "Bedroom"
+    return
+
+label street_dialogue:
+    scene street
+    $ Location = "Street"
+    show demo worried at right
+    r1 "I wonder if there's any street food places nearby..."
+    m "Probably not."
+    r1 "Let's just get back home, I'm hungry."
+    $ Location = "Bedroom"
+    return
 
 label variables:
 
     $ PLAYERNAME = "Anon"
-    $ calendar = Calendar(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], [31, 28,31, 30, 31, 30, 31, 31, 30, 31, 30, 31], ["Morning", "Afternoon", "Evening", "Night"], 8, 0, 0, 0, 0)
+    $ calendar = Calendar(
+        ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], 
+        ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], 
+        [31, 28,31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+        ["Morning", "Afternoon", "Evening", "Night"],
+        8,
+        0,
+        0,
+        0,
+        0
+        )
     return
 
 label EventCheck:
