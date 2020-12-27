@@ -31,21 +31,7 @@ label start:
         "Hmmm there's not much to do right now..."
 
         if Location == "Dorm":
-            scene dorm
-            show demo     
-            r1 "Hey [PLAYERNAME]!"
-            r1 "Wanna go outside on a walk with me?"
-
-            menu:
-                "Sure, let's go check out campus":
-                    call college_dialogue
-                "Lets take a walk on the streets":
-                    call street_dialogue
-                "Follow me to my room":
-                    call bedroom_dialogue_r1
-                "No I think I'll pass":
-                    show demo worried
-                    r1 "Do you not like me?"
+            call dorm_script
 
         # menu:
             # $ MapMenu = renpy.call_screen("MapScreen", _layer="screens")
@@ -57,6 +43,23 @@ label start:
     return
 
     #call introscript
+
+label dorm_script:
+    scene dorm
+    show demo     
+    r1 "Hey [PLAYERNAME]!"
+    r1 "Wanna go outside on a walk with me?"
+    menu:
+        "Sure, let's go check out campus":
+            call college_dialogue
+        "Lets take a walk on the streets":
+            call street_dialogue
+        "Follow me to my room":
+            call bedroom_dialogue_r1
+        "No I think I'll pass":
+            show demo worried
+            r1 "Do you not like me?"
+    return
 
 label bedroom_dialogue_r1:
     $ Location = "Bedroom"
