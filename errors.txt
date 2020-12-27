@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 60: expected statement.
-    call_screen screen MapScreen
-                                ^
+File "game/script.rpy", line 31: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
+    show demo_happy
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Dec 26 23:36:52 2020
+Sun Dec 27 01:48:15 2020

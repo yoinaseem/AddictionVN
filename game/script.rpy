@@ -27,8 +27,11 @@ label start:
         if renpy.has_image(Location_img, exact=True):
             scene expression Location_img
 
+        # "[Location]"
+        show demo_worried
+        r1 "Sorry [PLAYERNAME], all we can do right now is move around the map together..."
+
         # menu:
-        "[Location]"
             # $ MapMenu = renpy.call_screen("MapScreen", _layer="screens")
 
             # "hello":

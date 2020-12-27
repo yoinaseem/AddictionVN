@@ -1,22 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 56, in script
-    return
-Exception: Could not find return label (u'game/script.rpy', 1609026060, 12).
+  File "game/script.rpy", line 23, in script
+    while GameRunning:
+Exception: Possible infinite loop.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 56, in script
-    return
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1507, in execute
-    next_node(renpy.game.context().lookup_return(pop=True))
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\execution.py", line 696, in lookup_return
-    raise Exception("Could not find return label {!r}.".format(self.return_stack[-1]))
-Exception: Could not find return label (u'game/script.rpy', 1609026060, 12).
+  File "game/script.rpy", line 23, in script
+    while GameRunning:
+  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\execution.py", line 59, in check_infinite_loop
+    raise Exception("Possible infinite loop.")
+Exception: Possible infinite loop.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 AddictionVN 1.0
-Sat Dec 26 23:42:05 2020
+Sun Dec 27 01:51:42 2020
