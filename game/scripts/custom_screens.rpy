@@ -1,7 +1,7 @@
 screen calendar_screen():
       hbox:
+        # $ calendar.Output()
          text "[Output]"
-         # text calendar.Output()
 
 screen map_screen():
     hbox:

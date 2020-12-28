@@ -8,44 +8,61 @@ define r1 = Character("Roommate1")
 define r2 = Character("Roommate2")
 define r3 = Character("Roommate3")
 define m = Character("Me")
-
 default Location = "Bedroom"
 
 
 label start:
 
     call variables
-    show screen calendar_screen
-    show screen map_screen
-    $ Output = calendar.Output
-    $ Location_img = Location.lower()
+
+
+    # show screen calendar_screen
+    # show screen map_screen
+    # $ Output = calendar.Output
+    # $ Location_img = Location.lower()
     
-    if renpy.has_image(Location_img, exact=True):
-        scene expression Location_img
+    # if renpy.has_image(Location_img, exact=True):
+    #     scene expression Location_img
 
-    "Hmm there's not much to do right now..."
-    $ calendar.AdvanceTime(5)
-    "Some time has passed"
+    # $ Location_img = Location.lower()
+    # if renpy.has_image(Location_img, exact=True):
+    #     scene expression Location_img
 
-    # $ GameRunning = True
-    # while GameRunning:
+    # "Hmmm there's not much to do right now..."
 
-    #     $ Location_img = Location.lower()
-    #     if renpy.has_image(Location_img, exact=True):
-    #         scene expression Location_img
-
-    #     "Hmmm there's not much to do right now..."
-
-    #     if Location == "Dorm":
+    # if Location == "Dorm":
     #         call dorm_script
 
-    #     if Location == "Bedroom":
-    #         scene bedroom
-    #         menu:
-    #             "Go to sleep":  
-    #                 $ calendar.AdvanceTime(10)
-    #                 "Wow, I still feel tired."
+    # if Location == "Bedroom":
+    #     scene bedroom
+    #     menu:
+    #         "Go to sleep":  
+    #             $ calendar.AdvanceTime(10)
+    #             "Wow, I still feel tired."
 
-    # return
+    # jump start
+
+    $ GameRunning = True
+    while GameRunning:
+        show screen calendar_screen
+        show screen map_screen
+        $ Output = calendar.Output
+
+        $ Location_img = Location.lower()
+        if renpy.has_image(Location_img, exact=True):
+            scene expression Location_img
+
+        "Hmmm there's not much to do right now..."
+
+        if Location == "Dorm":
+            call dorm_script
+
+        if Location == "Bedroom":
+            menu:
+                "Go to sleep":  
+                    $ calendar.AdvanceTime(10)
+                    "Wow, I still feel tired."
+
+    return
 
 
