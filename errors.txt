@@ -2,9 +2,19 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 75: expected statement.
-    AdvanceTime(1)
-                  ^
+File "game/scripts/variables.rpy", line 4: expected statement.
+    calendar = Calendar(
+             ^
+            ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], 
+            ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], 
+            [31, 28,31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+            ["Morning", "Afternoon", "Evening", "Night"],
+            8,
+            0,
+            0,
+            0,
+            0
+            )
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Dec 27 21:02:49 2020
+Mon Dec 28 18:01:24 2020
