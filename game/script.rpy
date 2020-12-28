@@ -14,24 +14,29 @@ default Location = "Bedroom"
 
 label start:
 
-
+    show screen calendar_screen
+    show screen map_screen
     call variables
     $ Output = calendar.Output
-    # $ MapMenu = renpy.call_screen("MapScreen", _layer="screens")
 
     $ GameRunning = True
     while GameRunning:
-        show screen calendar_screen
-        show screen map_screen
+
         $ Location_img = Location.lower()
         if renpy.has_image(Location_img, exact=True):
             scene expression Location_img
 
-        # "[Location]"
         "Hmmm there's not much to do right now..."
 
         if Location == "Dorm":
             call dorm_script
+
+        if Location == "Bedroom":
+            scene bedroom
+            menu:
+                "Go to sleep":  
+                    $ calendar.AdvanceTime(10)
+                    "Wow, I still feel tired."
 
         # menu:
             # $ MapMenu = renpy.call_screen("MapScreen", _layer="screens")
@@ -43,6 +48,7 @@ label start:
     return
 
     #call introscript
+
 
 label dorm_script:
     scene dorm
@@ -68,6 +74,7 @@ label bedroom_dialogue_r1:
     r1 "We're in your bedroom [PLAYERNAME]"
     show demo worried
     r1 "I... I think I'm going to leave..."
+    $ calendar.AdvanceTime(1)
     return
 
 label college_dialogue:
@@ -77,6 +84,7 @@ label college_dialogue:
     r1 "Wow, campus sure is pretty!"
     m "Yeah. Should we head back?"
     r1 "Yeah."
+    $ calendar.AdvanceTime(4)
     $ Location = "Bedroom"
     return
 
@@ -87,6 +95,7 @@ label street_dialogue:
     r1 "I wonder if there's any street food places nearby..."
     m "Probably not."
     r1 "Let's just get back home, I'm hungry."
+    $ calendar.AdvanceTime(4)
     $ Location = "Bedroom"
     return
 
@@ -104,14 +113,6 @@ label variables:
         0,
         0
         )
-    return
-
-label EventCheck:
-
-    $ calendar.AdvanceTime(8)
-    $ Output = calendar.Output
-    "I am high as fuck right now, I need to lie down."
-
     return
 
 label OpenMap:
