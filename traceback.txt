@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 46, in script
-    #     $ Location_img = Location.lower()
-  File "game/script.rpy", line 46, in <module>
-    #     $ Location_img = Location.lower()
-NameError: name 'GameRunning' is not defined
+  File "game/script.rpy", line 64, in script
+    menu:
+  File "game/script.rpy", line 64, in <module>
+    menu:
+NameError: name 'bedroom' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 46, in script
-    #     $ Location_img = Location.lower()
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1775, in execute
-    if renpy.python.py_eval(self.condition):
+  File "game/script.rpy", line 64, in script
+    menu:
+  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1274, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1139, in show_imspec
+    expression = renpy.python.py_eval(expression)
   File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2059, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 46, in <module>
-    #     $ Location_img = Location.lower()
-NameError: name 'GameRunning' is not defined
+  File "game/script.rpy", line 64, in <module>
+    menu:
+NameError: name 'bedroom' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 AddictionVN 1.0
-Mon Dec 28 19:17:57 2020
+Mon Dec 28 20:28:20 2020

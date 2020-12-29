@@ -8,13 +8,13 @@ define r1 = Character("Roommate1")
 define r2 = Character("Roommate2")
 define r3 = Character("Roommate3")
 define m = Character("Me")
-default Location = "Bedroom"
 
+default Location = "Bedroom"
+default BGImage = ""
 
 label start:
 
     call variables
-
 
     # show screen calendar_screen
     # show screen map_screen
@@ -44,6 +44,7 @@ label start:
 
     $ GameRunning = True
     while GameRunning:
+        # $ UIreturn = renpy.call_screen("Main_UI")
         show screen calendar_screen
         show screen map_screen
         $ Output = calendar.Output
@@ -53,11 +54,14 @@ label start:
             scene expression Location_img
 
         "Hmmm there's not much to do right now..."
+        $ clickType = ""
+
 
         if Location == "Dorm":
             call dorm_script
 
         if Location == "Bedroom":
+            scene expression "bedroom"
             menu:
                 "Go to sleep":  
                     $ calendar.AdvanceTime(10)

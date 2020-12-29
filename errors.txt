@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 37: choice menuitem expects a non-empty block.
-    "Go to sleep":  
-                    ^
+File "game/scripts/Main_UI.rpy", line 4: hbox expects a non-empty block.
+    hbox:
+         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Dec 28 18:54:29 2020
+Mon Dec 28 19:41:35 2020
