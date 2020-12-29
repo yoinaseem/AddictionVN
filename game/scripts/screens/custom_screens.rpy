@@ -1,13 +1,12 @@
 screen calendar_screen():
       hbox:
-        # $ calendar.Output()
          text "[Output]"
 
 screen map_screen():
+    zorder 100
     hbox:
         xalign 1.0
         yalign 0.0
-        # textbutton _("Open Map") action (Hide("map_screen"), Show("MapScreen")), Return(0)
         imagebutton:
             idle "mapicon"
             hover "mapiconhovered" 
@@ -15,6 +14,7 @@ screen map_screen():
 
 
 screen MapScreen():
+    zorder 100
     modal True
     frame:
         xalign 0.0
@@ -29,17 +29,11 @@ screen MapScreen():
             textbutton _("Return") action ToggleScreen("MapScreen")
         
         for q in Places:
-            if q.isActive:
+            if q.unlocked:
                 button: 
                     xpos q.x
                     ypos q.y
                     text q.name
-                    action Return(q.name), #ToggleScreen("MapScreen")
-
-        # button: 
-        #     xpos 700
-        #     ypos 300
-        #     text "Living Room"
-        #     action Return("Dorm")
+                    action Return(q.name)
 
 

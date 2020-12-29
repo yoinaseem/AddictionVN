@@ -97,6 +97,7 @@ style frame:
 
 screen say(who, what):
     style_prefix "say"
+    use BGIMAGE
 
     window:
         id "window"

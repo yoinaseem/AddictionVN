@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/Main_UI.rpy", line 4: hbox expects a non-empty block.
-    hbox:
-         ^
+File "game/scripts/screens/screens.rpy", line 100: Line is indented, but the preceding style_prefix statement does not expect a block. Please check this line's indentation.
+    use BGIMAGE
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Dec 28 19:41:35 2020
+Tue Dec 29 14:51:00 2020

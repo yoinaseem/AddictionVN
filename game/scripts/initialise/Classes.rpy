@@ -30,29 +30,27 @@ init python:
                 self.Month = 0
 
     class Place(object):
-        def __init__(self, x, y, name, bg, isActive):
+        def __init__(self, x, y, name, bg, unlocked):
             self.x = x
             self.y = y 
             self.name = name 
             self.bg = bg
-            self.isActive = isActive 
+            self.unlocked = unlocked
+
+    class Player(object):
+        def __init__(self, name, strength, charm, cash):
+            self.name = name
+            self.strength = strength 
+            self.charm = charm 
+            self.cash = cash 
+
 
     Places = []
-    t=0
 
-    while t < 50:
-        Places.append(Place(0,0,"", "", False))
-        t+=1
+    Places.append(Place(1000,500, "Bedroom", "bedroom", True))
+    Places.append(Place(700,300, "Dorm", "dorm", True))
+    Places.append(Place(200,500, "College", "college", True))
+    Places.append(Place(500,100, "Street", "street", True))
 
-    Places[0] = Place(1000,500, "Bedroom", "bedroom", True)
-    Places[1] = Place(700,300, "Dorm", "dorm", True)
-    Places[2] = Place(200,500, "College", "college", True)
-    Places[3] = Place(500,100, "Street", "street", True)
-
-    def BGDeclare():
-        global Location
-        global BGImage
-        BGImage = Location.lower()
-        BGImage = BGImage.replace(" ", "")
-        BGImage = BGImage + ".jpg"
+    
 

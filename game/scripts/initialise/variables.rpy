@@ -1,6 +1,5 @@
 label variables:
-
-    $ PLAYERNAME = "Anon"
+    $ MC = Player("Anon", 0, 0, 50)
     $ calendar = Calendar(
         ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], 
         ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], 

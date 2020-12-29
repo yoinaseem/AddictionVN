@@ -1,18 +1,4 @@
-﻿define p = Character("Psychadelic")
-define s = Character("Stimulant")
-define d = Character("Dissociative")
-define ad = Character("Anti-Depressant")
-define o = Character("Opioids")
-define h = Character ("Hallucinogens")
-define r1 = Character("Roommate1")
-define r2 = Character("Roommate2")
-define r3 = Character("Roommate3")
-define m = Character("Me")
-
-default Location = "Bedroom"
-default BGImage = ""
-
-label start:
+﻿label start:
 
     call variables
 
@@ -49,23 +35,32 @@ label start:
         show screen map_screen
         $ Output = calendar.Output
 
-        $ Location_img = Location.lower()
-        if renpy.has_image(Location_img, exact=True):
-            scene expression Location_img
+        # $ Location_img = Location.lower()
+        # if renpy.has_image(Location_img, exact=True):
+        #     scene expression Location_img
 
-        "Hmmm there's not much to do right now..."
-        $ clickType = ""
+        # "Hmmm there's not much to do right now..."
+        # $ clickType = ""
 
+        menu:
+            "[MC.name]: Strength: [MC.strength], Charm: [MC.charm], Cash: [MC.cash]"
+            "Add Cash":
+                $ MC.cash += 100
+            "Train Strength":
+                $ MC.strength += 1
+            "Increase Charm":
+                $ MC.charm += 1
+             
 
-        if Location == "Dorm":
-            call dorm_script
+        # if Location == "Dorm":
+        #     call dorm_script
 
-        if Location == "Bedroom":
-            scene expression "bedroom"
-            menu:
-                "Go to sleep":  
-                    $ calendar.AdvanceTime(10)
-                    "Wow, I still feel tired."
+        # if Location == "Bedroom":
+        #     scene expression "bedroom"
+        #     menu:
+        #         "Go to sleep":  
+        #             $ calendar.AdvanceTime(10)
+        #             "Wow, I still feel tired."
 
     return
 

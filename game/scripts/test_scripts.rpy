@@ -1,7 +1,7 @@
 label dorm_script:
     scene dorm
     show demo     
-    r1 "Hey [PLAYERNAME]!"
+    r1 "Hey [MC.name]!"
     r1 "Wanna go outside on a walk with me?"
     menu:
         "Sure, let's go check out campus":
