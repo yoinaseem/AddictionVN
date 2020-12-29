@@ -2,66 +2,19 @@
 
     call variables
 
-    # show screen calendar_screen
-    # show screen map_screen
-    # $ Output = calendar.Output
-    # $ Location_img = Location.lower()
-    
-    # if renpy.has_image(Location_img, exact=True):
-    #     scene expression Location_img
-
-    # $ Location_img = Location.lower()
-    # if renpy.has_image(Location_img, exact=True):
-    #     scene expression Location_img
-
-    # "Hmmm there's not much to do right now..."
-
-    # if Location == "Dorm":
-    #         call dorm_script
-
-    # if Location == "Bedroom":
-    #     scene bedroom
-    #     menu:
-    #         "Go to sleep":  
-    #             $ calendar.AdvanceTime(10)
-    #             "Wow, I still feel tired."
-
-    # jump start
+    $ DateTime = calendar.DateTime
 
     $ GameRunning = True
     while GameRunning:
-        # $ UIreturn = renpy.call_screen("Main_UI")
-        show screen calendar_screen
-        show screen map_screen
-        $ Output = calendar.Output
+        window hide
+        $ clickType = ""
+        $ UIreturn = renpy.call_screen("Main_UI", _layer="screens")
 
-        # $ Location_img = Location.lower()
-        # if renpy.has_image(Location_img, exact=True):
-        #     scene expression Location_img
+        if clickType == "Nav":
+            $ Location = UIreturn
 
-        # "Hmmm there's not much to do right now..."
-        # $ clickType = ""
+        if clickType == "cheat":
+            $ MC.cash += 100
 
-        menu:
-            "[MC.name]: Strength: [MC.strength], Charm: [MC.charm], Cash: [MC.cash]"
-            "Add Cash":
-                $ MC.cash += 100
-            "Train Strength":
-                $ MC.strength += 1
-            "Increase Charm":
-                $ MC.charm += 1
-             
-
-        # if Location == "Dorm":
-        #     call dorm_script
-
-        # if Location == "Bedroom":
-        #     scene expression "bedroom"
-        #     menu:
-        #         "Go to sleep":  
-        #             $ calendar.AdvanceTime(10)
-        #             "Wow, I still feel tired."
 
     return
-
-

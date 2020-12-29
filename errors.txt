@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/screens/screens.rpy", line 100: Line is indented, but the preceding style_prefix statement does not expect a block. Please check this line's indentation.
-    use BGIMAGE
-    ^
+File "game/scripts/screens/NavMap.rpy", line 17: u'text' is not a keyword argument or valid child for the imagebutton statement.
+    text q.name
+        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Dec 29 14:51:00 2020
+Tue Dec 29 20:52:13 2020

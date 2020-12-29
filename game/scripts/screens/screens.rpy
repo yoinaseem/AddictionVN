@@ -97,7 +97,6 @@ style frame:
 
 screen say(who, what):
     style_prefix "say"
-    use BGIMAGE
 
     window:
         id "window"
@@ -206,6 +205,7 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 screen choice(items):
+    use Main_UI
     style_prefix "choice"
 
     vbox:
@@ -323,7 +323,7 @@ screen navigation():
             textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
-        textbutton _("config") action ShowMenu("preferences")
+        textbutton _("Config") action ShowMenu("preferences")
 
         
        
