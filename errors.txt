@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/screens/map_icon.rpy", line 9: reached end of line when expecting ':'.
-    if clickType == "Character" or clickType == "Object"
-                                                        ^
+File "game/scripts/screens/CharacterScreen.rpy", line 14: u'image' is not a keyword argument or valid child for the image statement.
+    image q.Avatar
+         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Dec 30 22:38:31 2020
+Wed Dec 30 22:59:52 2020

@@ -3,7 +3,7 @@ screen map_icon():
         xalign 1.0
         idle "ui/map/mapicon.png"
         hover "ui/map/mapiconhovered.png" 
-        action ToggleVariable("navMenu")
+        action SetVariable("clickType", "Map"), ToggleVariable("navMenu")
         # hovered tt.Action("Toggle Map")
     
     if clickType == "Character" or clickType == "Object":
