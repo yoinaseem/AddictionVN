@@ -1,52 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/scripts/screens/CharacterScreen.rpy", line 1, in analyze_screen
-    screen CharacterScreen():
-  File "game/scripts/screens/CharacterScreen.rpy", line 1, in analyze
-    screen CharacterScreen():
-  File "game/scripts/screens/CharacterScreen.rpy", line 1, in analyze
-    screen CharacterScreen():
-  File "game/scripts/screens/CharacterScreen.rpy", line 2, in analyze
-    for q in Characters:
-  File "game/scripts/screens/CharacterScreen.rpy", line 2, in analyze
-    for q in Characters:
-  File "game/scripts/screens/CharacterScreen.rpy", line 11, in analyze
-    if clickType == "Character" or clickType == "Object" or clickType = "Nav":
-SyntaxError: invalid syntax (game/scripts/screens/CharacterScreen.rpy, line 11)
+While running game code:
+  File "game/scripts/script.rpy", line 17, in script call
+    call expression UIreturn
+  File "game/scripts/items_clicked/defaultClicks.rpy", line 7, in script
+    menu:
+TypeError: list indices must be integers, not unicode
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
-    renpy.main.main()
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\main.py", line 578, in main
-    run(restart)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\main.py", line 86, in run
-    renpy.display.screen.analyze_screens()
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 901, in analyze_screens
-    s.ast.analyze_screen()
-  File "game/scripts/screens/CharacterScreen.rpy", line 1, in analyze_screen
-    screen CharacterScreen():
-  File "game/scripts/screens/CharacterScreen.rpy", line 1, in analyze
-    screen CharacterScreen():
-  File "game/scripts/screens/CharacterScreen.rpy", line 1, in analyze
-    screen CharacterScreen():
-  File "game/scripts/screens/CharacterScreen.rpy", line 2, in analyze
-    for q in Characters:
-  File "game/scripts/screens/CharacterScreen.rpy", line 2, in analyze
-    for q in Characters:
-  File "game/scripts/screens/CharacterScreen.rpy", line 11, in analyze
-    if clickType == "Character" or clickType == "Object" or clickType = "Nav":
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\pyanalysis.py", line 533, in is_constant_expr
-    node, literal = ccache.ast_eval_literal(expr)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\pyanalysis.py", line 687, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 692, in py_compile
-    raise e
-SyntaxError: invalid syntax (game/scripts/screens/CharacterScreen.rpy, line 11)
+  File "game/scripts/script.rpy", line 17, in script call
+    call expression UIreturn
+  File "game/scripts/items_clicked/defaultClicks.rpy", line 7, in script
+    menu:
+  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1631, in execute
+    next_node(self.items[choice][2][0])
+TypeError: list indices must be integers, not unicode
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 AddictionVN 1.0
-Wed Dec 30 22:57:44 2020
+Wed Dec 30 23:15:20 2020
