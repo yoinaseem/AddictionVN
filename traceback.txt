@@ -1,91 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scripts/script.rpy", line 11, in script
-    
-  File "game/scripts/script.rpy", line 11, in <module>
-    
-  File "game/scripts/screens/Main_UI.rpy", line 1, in execute
-    screen Main_UI():
-  File "game/scripts/screens/Main_UI.rpy", line 1, in execute
-    screen Main_UI():
-  File "game/scripts/screens/Main_UI.rpy", line 4, in execute
-    use map_icon
-  File "game/scripts/screens/map_screen.rpy", line 1, in execute
-    screen map_icon():
-  File "game/scripts/screens/map_screen.rpy", line 1, in execute
-    screen map_icon():
-  File "game/scripts/screens/map_screen.rpy", line 3, in execute
-    frame:
-  File "game/scripts/screens/map_screen.rpy", line 7, in execute
-    imagebutton:
-  File "game/scripts/screens/map_screen.rpy", line 7, in keywords
-    imagebutton:
-Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
-Stack was <Layer: 'transient'>
-<Many: <Fixed at 6fea490>>
-<renpy.sl2.slast.SLContext object at 0x0476DF10>
+  File "game/scripts/script.rpy", line 17, in script call
+    if clickType == "Object":
+  File "game/scripts/items_clicked/defaultClicks.rpy", line 7, in script
+    $ Notification = True
+TypeError: list indices must be integers, not unicode
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scripts/script.rpy", line 11, in script
-    
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/scripts/script.rpy", line 11, in <module>
-    
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 2905, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 430, in visit_all
-    callback(self)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 440, in per_interact
-    self.update()
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
-    self.screen.function(**self.scope)
-  File "game/scripts/screens/Main_UI.rpy", line 1, in execute
-    screen Main_UI():
-  File "game/scripts/screens/Main_UI.rpy", line 1, in execute
-    screen Main_UI():
-  File "game/scripts/screens/Main_UI.rpy", line 4, in execute
-    use map_icon
-  File "game/scripts/screens/map_screen.rpy", line 1, in execute
-    screen map_icon():
-  File "game/scripts/screens/map_screen.rpy", line 1, in execute
-    screen map_icon():
-  File "game/scripts/screens/map_screen.rpy", line 3, in execute
-    frame:
-  File "game/scripts/screens/map_screen.rpy", line 7, in execute
-    imagebutton:
-  File "game/scripts/screens/map_screen.rpy", line 7, in keywords
-    imagebutton:
-  File "<screen language>", line 10, in <module>
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 2905, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 291, in interact
-    raise Exception("ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?\nStack was "+('\n'.join([str(item) for item in stack])))
-Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
-Stack was <Layer: 'transient'>
-<Many: <Fixed at 6fea490>>
-<renpy.sl2.slast.SLContext object at 0x0476DF10>
+  File "game/scripts/script.rpy", line 17, in script call
+    if clickType == "Object":
+  File "game/scripts/items_clicked/defaultClicks.rpy", line 7, in script
+    $ Notification = True
+  File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1631, in execute
+    next_node(self.items[choice][2][0])
+TypeError: list indices must be integers, not unicode
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 AddictionVN 1.0
-Tue Dec 29 23:43:31 2020
+Wed Dec 30 15:57:27 2020

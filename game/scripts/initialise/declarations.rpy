@@ -6,3 +6,4 @@ default Chapter = 0
 default Sequence = 0
 default navMenu = False
 default tt = Tooltip("")
+default Notification = False

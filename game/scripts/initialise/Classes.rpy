@@ -32,6 +32,7 @@ init python:
 
 
 
+
     class Place(object):
         def __init__(self, x, y, name, cfname, isActive):
             self.x = x
@@ -77,6 +78,7 @@ init python:
 
 
 
+
     class People(object):
         def __init__(self, firstname, lastname, cfname, location, isActive):
             self.fname = firstname
@@ -104,6 +106,9 @@ init python:
     Characters = []
     Characters.append(People("Test", "Girl", "test", "Dorm", True))
 
+
+
+
     class ClickObject(object):
         def __init__(self, name, cfname, location, clickType, isActive, tip):
             self.name = name
@@ -118,9 +123,36 @@ init python:
             Output = "images/clickObjects/" + "_" + self.location + ".png"
             return Output
 
+        @property
+        def Icon(self):
+            # global Location
+            global Chapter 
+            global Sequence
+            OutputA = "images/items/" + CFLocationName() + "_" + self.cfname + ".png"
+            OutputB = "images/items/" + CFLocationName() + "_" + self.cfname + "_" + str(Chapter) + "_" + str(Sequence) + ".png"
+            if renpy.loadable(OutputB):
+                return OutputB
+            if renpy.loadable(OutputA):
+                return OutputA
+
+        @property
+        def Clicked(self):
+            global Chapter 
+            global Sequence
+            OutputA = self.cfname + "_Clicked"
+            OutputB = self.cfname + "_" + str(Chapter) + "_" + str(Sequence) + ".png"
+            if renpy.has_label(OutputB):
+                return OutputB
+            if renpy.has_label(OutputA):
+                return OutputA
+            return "NoLabel"
+
     ClickObjects = []
 
-    ClickObjects.append(ClickObject("Test Object", "test_obj_01", "Bedroom", "Object", True, "Test Object"))
+    ClickObjects.append(ClickObject("Bed", "bed", "Bedroom", "Object", True, "Go to sleep"))
+    ClickObjects.append(ClickObject("Bong", "bong", "Dorm", "Object", True, "Hit the bong"))
+
+
 
 
 
@@ -138,7 +170,7 @@ init python:
         global Places 
         for q in Places:
             if Location == q.name:
-                return q.bgname
+                return q.cfname
         return ""
 
     def CFLocationNum():

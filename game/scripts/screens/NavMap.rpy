@@ -6,6 +6,12 @@ screen NavMap():
         xsize 1920
         ysize 1080
         add "ui/map/map_bg.jpg"
+
+        button:
+            xpos 0
+            ypos 0
+            text "Return"
+            action Return(Location)
      
         for q in Places:
             if q.isActive:

@@ -1,9 +1,12 @@
 screen Main_UI():
     use BGIMAGE
     use top_tbar
-    use map_icon
+    use ClickyScreen
     if navMenu:
         use NavMap
+    if Notification:
+        add "ui/Notif.png"
+
     use TipScreen
 
     # frame:
