@@ -1,4 +1,5 @@
 screen NavMap():
+    modal True
     frame:
         background None
         xalign 0.0

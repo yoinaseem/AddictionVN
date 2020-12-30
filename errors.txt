@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/screens/Main_UI.rpy", line 8: expected 'word' not found.
-    use "ui/Notif.png"
-        ^
+File "game/scripts/Chapters/character_defaults.rpy", line 4: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
+    "Hahaha you look high as fuck [MC.name]!"
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Dec 30 15:42:51 2020
+Wed Dec 30 18:49:41 2020

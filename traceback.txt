@@ -2,18 +2,18 @@
 
 While running game code:
   File "game/scripts/script.rpy", line 17, in script call
-    if clickType == "Object":
+    call expression UIreturn
   File "game/scripts/items_clicked/defaultClicks.rpy", line 7, in script
-    $ Notification = True
+    menu:
 TypeError: list indices must be integers, not unicode
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/scripts/script.rpy", line 17, in script call
-    if clickType == "Object":
+    call expression UIreturn
   File "game/scripts/items_clicked/defaultClicks.rpy", line 7, in script
-    $ Notification = True
+    menu:
   File "C:\Users\yoina\Documents\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1631, in execute
     next_node(self.items[choice][2][0])
 TypeError: list indices must be integers, not unicode
@@ -21,4 +21,4 @@ TypeError: list indices must be integers, not unicode
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 AddictionVN 1.0
-Wed Dec 30 15:57:27 2020
+Wed Dec 30 18:54:22 2020

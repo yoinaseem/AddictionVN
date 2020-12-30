@@ -101,7 +101,19 @@ init python:
         @property
         def Avatar(self):
             global Location
-            Output = "images/avatars/" + self.cfname + "_" + CFLocationName() +".png"
+            global Chapter 
+            global Sequence 
+            OutputA = "images/avatars/" + self.cfname + "_" + CFLocationName() + ".png"
+            OutputB = "images/avatars/" + self.cfname + "_" + CFLocationName() + str(Chapter) + "_" + str(Sequence) + ".png"
+            if renpy.loadable(OutputB):
+                return OutputB
+            return OutputA 
+
+        @property
+        def isLocal(self):
+            if self.location == Location:
+                return True
+            return False 
 
     Characters = []
     Characters.append(People("Test", "Girl", "test", "Dorm", True))
@@ -176,7 +188,7 @@ init python:
     def CFLocationNum():
         global Location
         global Places 
-        for q, i in enumerate(Places):
+        for i,q in enumerate(Places):
             if Location == q.name:
                 return i
         return -1
