@@ -1,10 +1,10 @@
 *.rpyc
-*.rpyb
+*.rbyb
 *.rpymc
 *.pyc
 *.pyo
 
-*~
+*.~
 *.bak
 
 saves
