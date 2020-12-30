@@ -21,4 +21,4 @@ TypeError: list indices must be integers, not unicode
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 AddictionVN 1.0
-Wed Dec 30 18:54:22 2020
+Wed Dec 30 22:44:58 2020

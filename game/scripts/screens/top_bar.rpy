@@ -12,14 +12,6 @@ screen top_tbar():
             text Location
 
 
-        imagebutton:
-            xalign 1.0
-            idle "ui/map/mapicon.png"
-            hover "ui/map/mapiconhovered.png" 
-            action ToggleVariable("navMenu")
-            hovered tt.Action("Toggle Map")
-
-
         # textbutton _("$" + str(MC.cash)) xalign 0.9 action SetVariable("clickType", "cheat"), Return(100)
         # hbox:
         #     xalign 0.9

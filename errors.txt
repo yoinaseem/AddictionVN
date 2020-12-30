@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/Chapters/character_defaults.rpy", line 4: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
-    "Hahaha you look high as fuck [MC.name]!"
-    ^
+File "game/scripts/screens/map_icon.rpy", line 9: reached end of line when expecting ':'.
+    if clickType == "Character" or clickType == "Object"
+                                                        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Dec 30 18:49:41 2020
+Wed Dec 30 22:38:31 2020
