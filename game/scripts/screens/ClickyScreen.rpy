@@ -8,7 +8,7 @@ screen ClickyScreen():
                 hovered tt.Action(q.name)
                 action SetVariable("clickType", q.clickType), Return(q.Clicked)
 
-        if clickType == "Object" or clickType == "Character" or clickType == "Map":
+        if clickType == "Object" or clickType == "Character" or navMenu:
             if q.location == Location and q.isActive:
                 imagebutton: 
                     hover q.Icon
